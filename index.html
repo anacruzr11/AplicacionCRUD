@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
 </head>
-<body>
+<body class="body">
     <header>
         <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -20,9 +20,9 @@
               <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
                   <a class="nav-link active" aria-current="page" href="#" style="color:#f7c9e8">Inicio</a>
-                  <a class="nav-link" href="#" style="color:rgb(247, 202, 232)">Servicios</a>
-                  <a class="nav-link" href="#" style="color:#f7c9e8">Nosotros</a>
-                  <a class="nav-link disabled" style="color:#faddf0">Inscríbete</a>
+                  <a class="nav-link" href="#" style="color:rgb(248, 231, 242)">Servicios</a>
+                  <a class="nav-link" href="#" style="color:rgb(248, 231, 242)">Nosotros</a>
+                  <a class="nav-link disabled" style="color:rgb(248, 231, 242)">Inscríbete</a>
                 </div>
               </div>
             </div>
@@ -30,45 +30,47 @@
     </header>
     <main>
         <div class="contact">
-            <h1>Inscripciones abiertas</h1>
-            <h5>Déjanos tus datos y los de tus amigas</h5>
-            <h5>Podrán participar en nuestro concurso para ganar un curso de maquillaje totalmente gratis</h5>
+            <h1 style="color:rgb(110, 48, 71)">Inscripciones abiertas</h1>
+            <h5 style="color:rgb(110, 48, 71)">Déjanos tus datos y los de tus amigas</h5>
+            <h5 style="color:rgb(110, 48, 71)">Podrán participar en nuestro concurso para ganar un curso de maquillaje totalmente gratis</h5>
         </div>
         <div class="container">
-            <form>
+          <article class="ingresoDatos">
+            <form class="datos">
                 <div class="mb-3">
-                    <label for="nombreInput" class="form-label">Nombre completo</label>
+                    <label for="nombreInput" class="form-label" style="color:rgb(110, 48, 71)">Nombre completo</label>
                     <input type="text" class="form-control" id="correoInput">
                 </div>
                 <div class="mb-3">
-                    <label for="emailInput" class="form-label">Correo electrónico</label>
+                    <label for="emailInput" class="form-label" style="color:rgb(110, 48, 71)">Correo electrónico</label>
                     <input type="email" class="form-control" id="correoInput" placeholder="nombre@ejemplo.com">
                 </div>
                 <div class="mb-3">
-                    <label for="telefonoInput" class="form-label">Número de teléfono</label>
+                    <label for="telefonoInput" class="form-label" style="color:rgb(110, 48, 71)">Número de teléfono</label>
                     <input type="number" class="form-control" id="telefonoInput" placeholder="ej:321456789">
                 </div>
                 <button type="button" class="btn btn-success">Agregar</button>                
             </form>
-            <article>
+          </article>
+            <article class="table-responsive">
                 <table class="table">
                     <thead>
                       <tr>
-                        <th scope="col">Nombre completo</th>
-                        <th scope="col">Teléfono</th>
-                        <th scope="col">Correo electrónino</th>
+                        <th scope="col" style="color:rgb(110, 48, 71)">Nombre completo</th>
+                        <th scope="col" style="color:rgb(110, 48, 71)">Teléfono</th>
+                        <th scope="col" style="color:rgb(110, 48, 71)">Correo electrónino</th>
                       </tr>
                     </thead>
                     <tbody id="cuerpoTabla"></tbody>
                   </table>
             </article>
         </div>
-    </main>
-    <footer class="bg-light text-center text-lg-start">
-        <div class="text-center p-3" style="background-color: rgb(247, 202, 232);">
-          © 2023 Ana María Cruz Rodríguez
-        </div>
-      </footer>
+      </main>
+    <footer class="footer">
+      <div class="footertext">
+        <p style="color:rgb(110, 48, 71)">© 2023 Ana María Cruz Rodríguez</p>
+      </div>
+    </footer>
    <script src="codigo.js"></script> 
 </body>
 </html>
