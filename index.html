@@ -39,17 +39,18 @@
             <form class="datos">
                 <div class="mb-3">
                     <label for="nombreInput" class="form-label" style="color:rgb(110, 48, 71)">Nombre completo</label>
-                    <input type="text" class="form-control" id="correoInput">
+                    <input type="text" class="form-control" id="nombreInput">
                 </div>
                 <div class="mb-3">
                     <label for="emailInput" class="form-label" style="color:rgb(110, 48, 71)">Correo electrónico</label>
-                    <input type="email" class="form-control" id="correoInput" placeholder="nombre@ejemplo.com">
+                    <input type="email" class="form-control" id="emailInput" placeholder="nombre@ejemplo.com">
                 </div>
                 <div class="mb-3">
                     <label for="telefonoInput" class="form-label" style="color:rgb(110, 48, 71)">Número de teléfono</label>
                     <input type="number" class="form-control" id="telefonoInput" placeholder="ej:321456789">
                 </div>
-                <button type="button" class="btn btn-success">Agregar</button>                
+                <button id="btnAgregar" type="button" class="btn btn-success" onclick="agregarUsuario()">Agregar</button>
+                <button id="btnGuardar" type="button" class="btn btn-warning" onclick="mostrarUsuario()">Guardar</button>                
             </form>
           </article>
             <article class="table-responsive">
@@ -57,8 +58,8 @@
                     <thead>
                       <tr>
                         <th scope="col" style="color:rgb(110, 48, 71)">Nombre completo</th>
-                        <th scope="col" style="color:rgb(110, 48, 71)">Teléfono</th>
                         <th scope="col" style="color:rgb(110, 48, 71)">Correo electrónino</th>
+                        <th scope="col" style="color:rgb(110, 48, 71)">Teléfono</th>
                       </tr>
                     </thead>
                     <tbody id="cuerpoTabla"></tbody>
