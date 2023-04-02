@@ -18,11 +18,11 @@ const agregarUsuario = () => {
     usuarios.push(usuario);
     
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
-    mostrarUsuarios();
+    mostrarUsuario();
 
 }
 
-const mostrarUsuarios = () => {
+const mostrarUsuario = () => {
     cuerpoTabla.innerHTML = "",
     usuarios.forEach((usuario) => {
         cuerpoTabla.innerHTML += `<tr>
@@ -56,7 +56,7 @@ const eliminarUsuario = () => {
     const index = usuarios.indexOf(usuario)
     usuarios.splice(index, 1)
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
-    mostrarUsuarios()
+    mostrarUsuario()
 }
 
 const editarUsuario = () => {
@@ -83,7 +83,7 @@ const confirmarEdicion = () => {
     email.value = ""
     telefono.value = ""
 
-    mostrarUsuarios()
+    mostrarUsuario()
 }
 
-window.addEventListener("load", mostrarUsuarios)
+window.addEventListener("load", mostrarUsuario)
