@@ -6,6 +6,7 @@ const cuerpoTabla = document.getElementById("cuerpoTabla");
 
 const btnAgregar = document.getElementById("btnAgregar");
 const btnGuardar = document.getElementById("btnGuardar");
+btnGuardar.style.display = "none"
 
 const agregarUsuario = () => {
     const usuario = {
@@ -18,8 +19,6 @@ const agregarUsuario = () => {
     
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     mostrarUsuarios();
-
-    btnGuardar.style.display = "none"
 
 }
 
