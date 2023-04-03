@@ -1,9 +1,14 @@
 .body {
     background-color: rgb(248, 235, 243);
+    font-family: 'Arimo', sans-serif;;
 }
 
 .navbar {
     background-color: rgb(110, 48, 71);
+}
+
+.tituloPagina {
+    font-family: 'Anton', sans-serif;
 }
 
 .contact {

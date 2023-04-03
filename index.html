@@ -8,6 +8,12 @@
 
     <link rel="stylesheet" href="estilos.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Arimo&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
 </head>
 <body class="body">
     <header>
@@ -30,7 +36,7 @@
     </header>
     <main>
         <div class="contact">
-            <h1 style="color:rgb(110, 48, 71)">Inscripciones abiertas</h1>
+            <h1 class="tituloPagina" style="color:rgb(110, 48, 71)">Inscripciones abiertas</h1>
             <h5 style="color:rgb(110, 48, 71)">Déjanos tus datos y los de tus amigas</h5>
             <h5 style="color:rgb(110, 48, 71)">Podrán participar en nuestro concurso para ganar un curso de maquillaje totalmente gratis</h5>
         </div>
@@ -50,7 +56,8 @@
                     <input type="number" class="form-control" id="telefonoInput" placeholder="ej:321456789">
                 </div>
                 <button id="btnAgregar" type="button" class="btn btn-success" onclick="agregarUsuario()">Agregar</button>
-                <button id="btnGuardar" type="button" class="btn btn-info" onclick="mostrarUsuario()">Guardar</button>                
+                <button id="btnGuardar" type="button" class="btn btn-info" onclick="confirmarEdicion()">Guardar</button>  
+                <input type="hidden" id="nombreOriginal">              
             </form>
           </article>
             <article class="table-responsive">

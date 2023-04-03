@@ -3,19 +3,20 @@ const email = document.getElementById("emailInput");
 const telefono = document.getElementById("telefonoInput");
 const usuarios = JSON.parse(localStorage.getItem("usuarios")) || [];
 const cuerpoTabla = document.getElementById("cuerpoTabla");
+const nombreOriginal = document.getElementById("nombreOriginal")
 
 const btnAgregar = document.getElementById("btnAgregar");
 const btnGuardar = document.getElementById("btnGuardar");
 btnGuardar.style.display = "none"
 
 const agregarUsuario = () => {
-    const usuario = {
+    const usuarioValue = {
         nombre: nombre.value,
         email: email.value,
         telefono: telefono.value,
     }
     
-    usuarios.push(usuario);
+    usuarios.push(usuarioValue);
     
     localStorage.setItem("usuarios", JSON.stringify(usuarios));
     mostrarUsuario();
@@ -59,25 +60,26 @@ const eliminarUsuario = () => {
     mostrarUsuario()
 }
 
-const editarUsuario = () => {
+const editarUsuario = (edicion) => {
     btnAgregar.style.display = "none"
     btnGuardar.style.display = "inline"
 
-    const usuario = usuarios.find((usuario) => usuario.nombre === nombre)
+    const usuario = usuarios.find((usuario) => usuario.nombre === edicion)
     nombre.value = usuario.nombre
     email.value = usuario.email
     telefono.value = usuario.telefono
+    nombreOriginal.value = usuario.nombre
 }
 
 const confirmarEdicion = () => {
-    const usuario = usuarios.find((usuario) => usuario.nombre === nombreInput.value)
+    const usuario = usuarios.find((usuario) => usuario.nombre === nombreOriginal.value)
     usuario.nombre = nombre.value
     usuario.email = email.value
     usuario.telefono = telefono.value
     localStorage.setItem("usuarios", JSON.stringify(usuarios))
 
-    btnGuardar.style.display = "inline"
-    btnAgregar.style.display = "none"
+    btnGuardar.style.display = "none"
+    btnAgregar.style.display = "inline"
 
     nombre.value = ""
     email.value = ""
